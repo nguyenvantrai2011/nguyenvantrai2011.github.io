@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <title>Connecting TikTok · Videos2Social</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>Connecting TikTok…</h1>
+    <p class="muted">Returning to Videos2Social on this computer. If nothing happens, make sure the Studio is running
+      (<code>npm run studio</code>), then <a id="link" href="#">continue</a>.</p>
+  </main>
+  <script>
+    // TikTok only redirects to https pages. This page hands the one-time code to the Studio running on localhost;
+    // nothing is stored or sent anywhere else.
+    var target = 'http://localhost:4000/oauth/tiktok/callback' + location.search;
+    document.getElementById('link').href = target;
+    if (/[?&](code|error)=/.test(location.search)) location.replace(target);
+  </script>
+</body>
+</html>

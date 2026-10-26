@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy · Videos2Social</title>
+  <link rel="icon" href="logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header><a href="./"><img src="logo.svg" alt="">Videos2Social</a></header>
+  <main>
+    <h1>Privacy Policy</h1>
+    <p class="muted">Last updated: October 26, 2026</p>
+
+    <p>Videos2Social ("the app") is a self-hosted tool that runs entirely on the computer of the person using it.
+      This policy explains what data the app accesses, how it is used and stored, and how to remove it.</p>
+
+    <h2>Data the app accesses</h2>
+    <p>When you connect an account, the app receives only what is needed to publish your videos:</p>
+    <ul>
+      <li><strong>YouTube (Google):</strong> an OAuth access token and refresh token, plus the ID, name and profile
+        picture of the YouTube channel you choose. Scopes requested: <code>youtube.upload</code> (upload videos) and
+        <code>youtube.force-ssl</code> (set thumbnails and captions, change a video's publish time, read your channel name).</li>
+      <li><strong>Facebook (Meta), when connected:</strong> a Page access token plus the ID, name and picture of the
+        Pages you choose, used to publish videos to those Pages.</li>
+      <li><strong>TikTok, when connected:</strong> an access token and refresh token, your TikTok open ID, display name
+        and avatar (<code>user.info.basic</code>), and the creator settings TikTok returns before posting (nickname,
+        allowed privacy levels, comment/duet/stitch settings, maximum video length). Scopes requested:
+        <code>user.info.basic</code>, <code>video.publish</code> (post a video you choose) and <code>video.upload</code>
+        (send a video to your TikTok inbox as a draft).</li>
+    </ul>
+    <p>The app does not access your contacts, email, comments, analytics, payment details, or any videos it did not upload.</p>
+
+    <h2>How the data is used</h2>
+    <p>Tokens are used only to carry out actions you start in the app: uploading a video you created, setting its
+      title, description, tags, thumbnail and captions, scheduling or changing its publish time, and showing which
+      channel or Page it was posted to. The data is never sold or shared, and never used for advertising, profiling
+      or training models.</p>
+
+    <h2>Storage and security</h2>
+    <ul>
+      <li>All data is stored locally on your own computer, in a database inside the app's folder. The app has no
+        server of its own and sends no data to its developer or to any third party.</li>
+      <li>Access tokens, refresh tokens and OAuth client secrets are encrypted with AES-256-GCM. On macOS the
+        encryption key is kept in the system Keychain.</li>
+      <li>The app's web interface only accepts connections from the same computer (127.0.0.1).</li>
+      <li>Video files, titles and descriptions go only to the platform you choose (YouTube, Facebook or TikTok), over HTTPS,
+        through their official APIs. On TikTok, every post's caption, privacy level and interaction settings are chosen by you before posting.</li>
+    </ul>
+
+    <h2>Retention and deletion</h2>
+    <ul>
+      <li>Tokens are kept until you disconnect the account. Clicking <em>Disconnect</em> on the app's Accounts page
+        revokes the token with Google and deletes it, together with the app's local posting history for that account.</li>
+      <li>You can also revoke the app's access at any time from your Google Account at
+        <a href="https://myaccount.google.com/connections">myaccount.google.com/connections</a>
+        (or <a href="https://security.google.com/settings/security/permissions">security.google.com/settings/security/permissions</a>),
+        for Facebook under Settings → Business Integrations, and for TikTok under Settings and privacy → Security → Apps and services permissions.</li>
+      <li>Deleting the app's folder deletes all of its data. Videos already published stay on YouTube, Facebook or TikTok
+        until you remove them there.</li>
+    </ul>
+
+    <h2>YouTube API Services</h2>
+    <p>The app uses YouTube API Services. By connecting a YouTube channel you agree to the
+      <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>. Google's handling of your data is described
+      in the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+    <p>The app's use of information received from Google APIs follows the
+      <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>,
+      including the Limited Use requirements.</p>
+
+    <h2>Cookies</h2>
+    <p>This website and the app use no tracking cookies or analytics.</p>
+
+    <h2>Changes and contact</h2>
+    <p>If this policy changes, the new version will be posted on this page with a new date.
+      For questions or deletion requests, contact <a href="mailto:nguyenvantrai2011@gmail.com">nguyenvantrai2011@gmail.com</a>.</p>
+  </main>
+  <footer>
+    <a href="./">Home</a>
+    <a href="terms.html">Terms of Service</a>
+  </footer>
+</body>
+</html>
